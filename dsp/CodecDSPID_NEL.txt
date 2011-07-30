@@ -2,6 +2,8 @@ Original,/system/etc/soundimage/Sound_Original.txt
 Original_SPK,/system/etc/soundimage/Sound_Original_SPK.txt
 Original_Recording,/system/etc/soundimage/Sound_Original_Recording.txt
 Recording,/system/etc/soundimage/Sound_Recording.txt
+Recording_landscape,/system/etc/soundimage/Sound_Rec_Landscape.txt
+Recording_portrait,/system/etc/soundimage/Sound_Rec_Portrait.txt
 Original_Phone,/system/etc/soundimage/Sound_Original.txt
 Original_Phone_REC,/system/etc/soundimage/Sound_Phone_Original_REC_NEL.txt
 Original_Phone_SPK,/system/etc/soundimage/Sound_Phone_Original_SPK.txt
