@@ -38,6 +38,9 @@ mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 
 cp $STAGESYS/bin/akmd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/akmd
+cp $STAGESYS/bin/qmuxd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/bin/netmgrd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/bin/rild ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/bin/awb_camera ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/bin/bma150_usr ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/bin/dmagent ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -60,8 +63,16 @@ cp $STAGESYS/lib/libposteffect.so ../../../vendor/$MANUFACTURER/$DEVICE/propriet
 cp $STAGESYS/lib/libgemini.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libmmipl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 cp $STAGESYS/lib/libmmjpeg.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-cp $STAGESYS/lib/libhtc_ril.so ../../../vendor/htc/$DEVICE/proprietary
-cp $STAGESYS/lib/libril.so ../../../vendor/htc/$DEVICE/proprietary
+cp $STAGESYS/lib/libhtc_ril.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/lib/libril.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/lib/libdsi_netctrl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/lib/libqmi.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/lib/libdll.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/lib/libdiag.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/lib/libidl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/lib/libnetmgr.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/lib/libdsutils.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+cp $STAGESYS/lib/libqdp.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__MANUFACTURER__/$MANUFACTURER/g > ../../../vendor/$MANUFACTURER/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -112,7 +123,15 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmipl.so:/system/lib/libmmipl.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmjpeg.so:/system/lib/libmmjpeg.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhtc_ril.so:/system/lib/libhtc_ril.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril.so:/system/lib/libril.so
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril.so:/system/lib/libril.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libdsi_netctrl.so:/system/lib/libdsi_netctrl.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libqmi.so:/system/lib/libqmi.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libdll.so:/system/lib/libdll.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libdiag.so:/system/lib/libdiag.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libidl.so:/system/lib/libidl.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libnetmgr.so:/system/lib/libnetmgr.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libdsutils.so:/system/lib/libdsutils.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libqdp.so:/system/lib/libqdp.so
 EOF
 
 ./setup-makefiles.sh
