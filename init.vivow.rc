@@ -10,7 +10,9 @@ on fs
     mount ext4 /dev/block/mmcblk0p25 /system wait ro barrier=1
     mount ext4 /dev/block/mmcblk0p26 /data wait noatime nosuid nodev barrier=1 noauto_da_alloc
     mount ext4 /dev/block/mmcblk0p27 /cache wait noatime nosuid nodev barrier=1
-    mount ext4 /dev/block/mmcblk0p28 /devlog wait noatime nosuid nodev barrier=1
+    mount ext4 /dev/block/mmcblk0p28 /local wait noatime nosuid nodev barrier=1
+    mount ext4 /dev/block/mmcblk0p29 /devlog wait noatime nosuid nodev barrier=1
+
 
     mkdir /data/misc 1771 system misc
     mkdir /data/misc/wifi 0770 wifi wifi
