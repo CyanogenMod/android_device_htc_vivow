@@ -19,6 +19,7 @@
 DEVICE=vivow
 MANUFACTURER=htc
 
+mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/akmd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/akmd
 adb pull /system/bin/rild ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
