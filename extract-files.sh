@@ -19,12 +19,11 @@
 DEVICE=vivow
 MANUFACTURER=htc
 
-mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/akmd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/akmd
-adb pull /system/bin/rild ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/qmuxd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/netmgrd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+adb pull /system/bin/rild ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/awb_camera ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/bma150_usr ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/dmagent ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -48,9 +47,6 @@ adb pull /system/lib/libgemini.so ../../../vendor/$MANUFACTURER/$DEVICE/propriet
 adb pull /system/lib/libmmipl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libmmjpeg.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libhtc_ril.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libims_ril.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libreference-ril.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libril_ims.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libril.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libdsi_netctrl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/libqmi.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -87,9 +83,9 @@ PRODUCT_COPY_FILES += \\
 # All the blobs necessary for vivow
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/akmd:/system/bin/akmd \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/rild:/system/bin/rild \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/qmuxd:/system/bin/qmuxd \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/netmgrd:/system/bin/netmgrd \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/rild:/system/bin/rild \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/awb_camera:/system/bin/awb_camera \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bma150_usr:/system/bin/bma150_usr \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/dmagent:/system/bin/dmagent \\
@@ -112,10 +108,8 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgemini.so:/system/lib/libgemini.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmipl.so:/system/lib/libmmipl.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmjpeg.so:/system/lib/libmmjpeg.so \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmmjpeg.so:/system/lib/libmmjpeg.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhtc_ril.so:/system/lib/libhtc_ril.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libims_ril.so:/system/lib/libims_ril.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libreference-ril.so:/system/lib/libreference-ril.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril_ims.so:/system/lib/libril_ims.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libril.so:/system/lib/libril.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libdsi_netctrl.so:/system/lib/libdsi_netctrl.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libqmi.so:/system/lib/libqmi.so \\
