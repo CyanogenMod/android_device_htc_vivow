@@ -58,6 +58,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.telephony.support_ipv6=true \
     persist.telephony.support_ipv4=true
 
+# Override /proc/sys/vm/dirty_ratio on UMS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vold.umsdirtyratio=20
+
 DEVICE_PACKAGE_OVERLAYS += device/htc/vivow/overlay
 
 # gsm config xml file
