@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** Copyright 2009, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<device name="Android">
+  <item name="none">0</item>
+  <item name="screen.on">90</item> <!-- Estimated -->
+  <item name="bluetooth.active">142</item> <!-- In call -->
+  <item name="bluetooth.on">0.3</item>
+  <!-- CPU wakelock held for 830ms on bluetooth headset at command. 43mA * 830 -->
+  <item name="bluetooth.at">35690</item>
+  <item name="screen.full">200</item> <!-- Estimated -->
+  <item name="wifi.on">4</item>
+  <item name="wifi.active">120</item>
+  <item name="wifi.scan">220</item>
+  <item name="dsp.audio">106</item> <!-- Estimated -->
+  <item name="dsp.video">106</item> <!-- Estimated -->
+  <item name="radio.active">300</item>
+  <item name="gps.on">170</item>
+  <item name="battery.capacity">1450</item>
+  <item name="radio.scanning">70</item>
+  <array name="radio.on"> <!-- Strength 0 to BINS-1 -->
+      <value>3</value>
+      <value>3</value>
+  </array>
+  <array name="cpu.speeds"> <!-- from /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies -->
+    <value>245760</value>
+    <value>368640</value>
+    <value>768000</value>
+    <value>1024000</value>
+    <value>1113600</value>
+    <value>1209600</value>
+    <value>1305600</value>
+    <value>1401600</value>
+    <value>1497600</value>
+    <value>1516800</value>
+  </array>
+  <!-- Power consumption in suspend -->
+  <item name="cpu.idle">3.0</item> <!-- from /sys/class/power_supply/battery/current_now -->
+  <!-- Power consumption at different speeds -->
+  <array name="cpu.active"> <!-- Estimated -->
+      <value>60</value>
+      <value>74.7</value>
+      <value>120.6</value>
+      <value>154.9</value>
+      <value>163.8</value>
+      <value>173.2</value>
+      <value>184.5</value>
+      <value>196.2</value>
+      <value>208.9</value>
+      <value>220.1</value>
+  </array>
+</device>
