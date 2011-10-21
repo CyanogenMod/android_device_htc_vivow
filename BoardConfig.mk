@@ -35,7 +35,6 @@ TARGET_BOOTLOADER_BOARD_NAME := vivow
 
 # Use stock libril for now
 BOARD_USE_NEW_LIBRIL_HTC := true
-BOARD_MOBILEDATA_INTERFACE_NAME := "rmnet_sdio0"
 BOARD_HAS_EXTRA_SYS_PROPS := true
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1
