@@ -195,6 +195,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/vivow/prebuilt/bcm4329.ko:system/lib/modules/bcm4329.ko
 
+# recovery utilities
+PRODUCT_COPY_FILES += \
+    device/htc/vivow/choice_fn:recovery/root/sbin/choice_fn \
+    device/htc/vivow/detect_key:recovery/root/sbin/detect_key \
+    device/htc/vivow/htcbatt:recovery/root/sbin/htcbatt \
+    device/htc/vivow/offmode_charging:recovery/root/sbin/offmode_charging \
+    device/htc/vivow/power_test:recovery/root/sbin/power_test
+
 $(call inherit-product-if-exists, vendor/htc/vivow/vivow-vendor.mk)
 
 # common msm7x30 configs
