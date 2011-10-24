@@ -28,6 +28,9 @@ USE_CAMERA_STUB := true
 # inherit from common msm7x30
 -include device/htc/msm7x30-common/BoardConfigCommon.mk
 
+# inherit from 7x30 recovery for chargemode
+-include device/htc/7x30-recovery/BoardConfigCommon.mk
+
 # inherit from the proprietary version
 -include vendor/htc/vivow/BoardConfigVendor.mk
 
@@ -68,4 +71,3 @@ BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 BOARD_USES_MMCUTILS := true
-BOARD_USES_RECOVERY_CHARGEMODE := true
