@@ -195,7 +195,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/vivow/prebuilt/bcm4329.ko:system/lib/modules/bcm4329.ko
 
-$(call inherit-product-if-exists, vendor/htc/vivow/vivow-vendor.mk)
+# stuff common to all HTC phones
+$(call inherit-product, device/htc/common/common.mk)
+
+$(call inherit-product, build/target/product/full_base.mk)
 
 # common msm7x30 configs
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
@@ -206,10 +209,7 @@ $(call inherit-product, device/htc/vivow/media_a1026.mk)
 # htc audio settings
 $(call inherit-product, device/htc/vivow/media_htcaudio.mk)
 
-# stuff common to all HTC phones
-$(call inherit-product, device/htc/common/common.mk)
-
-$(call inherit-product, build/target/product/full_base.mk)
+$(call inherit-product-if-exists, vendor/htc/vivow/vivow-vendor.mk)
 
 PRODUCT_NAME := htc_vivow
 PRODUCT_DEVICE := vivow
