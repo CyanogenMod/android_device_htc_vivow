@@ -33,6 +33,9 @@ USE_CAMERA_STUB := true
 
 TARGET_BOOTLOADER_BOARD_NAME := vivow
 
+TARGET_GLOBAL_CFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
+
 # Use stock libril for now
 BOARD_USE_NEW_LIBRIL_HTC := true
 BOARD_HAS_EXTRA_SYS_PROPS := true
