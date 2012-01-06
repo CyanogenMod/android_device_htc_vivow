@@ -19,8 +19,6 @@ on fs
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
-    mkdir /data/d 0777 system system
-    mount debugfs /data/d /data/d
 
     chown radio system /sys/module/gpio_event/parameters/phone_call_status
     chmod 0664         /sys/module/gpio_event/parameters/phone_call_status
